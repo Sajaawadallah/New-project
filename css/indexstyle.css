@@ -16,9 +16,10 @@ textarea {
 a {
   text-decoration: none;
 }
+
 /* land-sec start */
 
-.land-sec {
+/* .land-sec {
   background-color: #0c6adb;
   background-image: url("../images/bg.png");
   background-repeat: no-repeat;
@@ -26,7 +27,7 @@ a {
   background-size: cover;
   position: relative;
   z-index: 0;
-}
+} */
 
 .land-sec .header .navbar-nav .nav-link {
   font-weight: 400 !important;
@@ -39,6 +40,41 @@ a {
   -o-transition: all 0.5s;
   position: relative;
   padding-right: 0px;
+}
+
+.land-sec .top-icons {
+  top: 30%;
+  left: 40px;
+}
+
+@media (max-width: 700px) {
+  .land-sec .top-icons {
+    display: none !important;
+  }
+}
+
+.land-sec .top-sec {
+  margin-top: 26%;
+}
+
+@media (min-width: 700px) {
+  .land-sec .top-sec {
+    margin-top: 12%;
+  }
+}
+
+.land-sec .top-icons a i {
+  color: white;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  font-size: 18px;
+}
+
+.land-sec .top-icons a:hover i {
+  color: #fbb93b;
 }
 
 .land-sec .header .navbar-nav .nav-link:hover {
@@ -323,11 +359,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 1s;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -ms-transition: background 1s;
-  -o-transition: background 1s;
+  transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
 }
 
 @media (min-width: 1200px) {
@@ -363,14 +399,12 @@ a {
   top: -10px;
   display: flex;
   visibility: hidden;
-  transition: visibility 0.5s;
-  -webkit-transition: visibility 0.5s;
-  -moz-transition: visibility 0.5s;
-  -ms-transition: visibility 0.5s;
-  -o-transition: visibility 0.5s;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 .services .serv-card:hover .serv-card-img .small-img {
   visibility: visible;
+  opacity: 1;
 }
 
 .services .serv-card .serv-card-title {
@@ -399,18 +433,14 @@ a {
   line-height: 50px;
   letter-spacing: -0.5px;
   color: #0c68d7 !important;
-  transition: all 0.6s;
-  -webkit-transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  -ms-transition: all 0.6s;
-  -o-transition: all 0.6s;
   display: flex;
   visibility: hidden;
-  transition: visibility 0.5s;
-  -webkit-transition: visibility 0.5s;
-  -moz-transition: visibility 0.5s;
-  -ms-transition: visibility 0.5s;
-  -o-transition: visibility 0.5s;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
+  -moz-transition: visibility 0.3s linear, opacity 0.3s linear;
+  -ms-transition: visibility 0.3s linear, opacity 0.3s linear;
+  -o-transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 
 .services .serv-card a:hover {
@@ -419,6 +449,7 @@ a {
 
 .services .serv-card:hover a {
   visibility: visible;
+  opacity: 1;
 }
 
 /* services end */
@@ -763,8 +794,8 @@ a {
 }
 .float {
   position: fixed;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   bottom: 40px;
   right: 40px;
   background-color: #00c74a;
@@ -773,7 +804,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
 }
@@ -921,12 +952,12 @@ a {
 }
 .con-tab #pills-home-tab {
   position: absolute;
-  top: 50px;
-  right: 0px;
+  top: 0;
+  right: 12%;
 }
 .con-tab #pills-profile-tab {
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: -8%;
 }
 
@@ -937,12 +968,12 @@ a {
 }
 .con-tab #pills-home-tab1 {
   position: absolute;
-  top: 50px;
-  left: 0px;
+  top: 0px;
+  left: 12%;
 }
 .con-tab #pills-profile-tab1 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: -8%;
 }
 
