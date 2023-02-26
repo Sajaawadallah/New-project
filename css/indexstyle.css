@@ -42,6 +42,28 @@ a {
   padding-right: 0px;
 }
 
+#myheader .navbar-nav .nav-link {
+  font-weight: 400 !important;
+  line-height: 22px;
+  color: #0353b4;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  position: relative;
+  padding-right: 0px;
+}
+
+#myheader .navbar-nav .nav-link:hover {
+  color: #ffc34f;
+}
+
+#myheader .navbar-nav .active {
+  font-weight: 500 !important;
+  color: #ffc34f;
+}
+
 .land-sec .top-icons {
   top: 30%;
   left: 40px;
@@ -61,6 +83,119 @@ a {
   .land-sec .top-sec {
     margin-top: 12%;
   }
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+}
+
+header .video-container {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+header .video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+header .video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    249.13deg,
+    rgba(3, 83, 180, 0.89) 36.2%,
+    rgba(3, 83, 180, 0.78) 125.42%
+  );
+}
+
+.sidebar li .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.dropdow {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdow-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 30;
+}
+
+.dropdow-content a {
+  color: #0c6adb;
+  padding: 10px 16px !important;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropbtn {
+  font-size: 16px;
+  color: white !important;
+}
+
+.dropbtn i {
+  font-size: 12px !important;
+}
+
+@media (max-width: 1400px) {
+  .dropbtn {
+    font-size: 15px !important;
+  }
+}
+
+.dropdow-content a:hover {
+  background-color: #fbb93b;
+  color: white;
+}
+
+.dropdow:hover .dropdow-content {
+  display: block;
+  margin-left: 10px;
+}
+
+#myheader {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white !important;
+  height: 70px;
+  box-shadow: -1px 0px 5px rgb(57 63 72 / 30%) !important;
+  transition: display 5s 3s ease !important;
+}
+
+.sticky > .nav {
+  padding-top: 0px !important;
+}
+
+.offcanvas-body .nav-link {
+  height: 20px !important;
 }
 
 .land-sec .top-icons a i {
@@ -759,6 +894,7 @@ a {
 }
 
 .clent-say .slide-img .play-over {
+  z-index: 2 !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -780,7 +916,26 @@ a {
   align-items: center;
   text-align: center;
   color: #0353b4;
-  outline: 20px solid rgba(11, 132, 238, 0.36);
+}
+.clent-say .slide-img::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(11, 132, 238, 0.36);
+  z-index: 1 !important ;
 }
 .clent-say .slide-img .play-over:hover {
   transition: all 0.5s;
@@ -788,10 +943,11 @@ a {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
-  outline: 30px solid rgba(11, 132, 238, 0.36);
   background-color: #0353b4;
+  outline: rgba(11, 132, 238, 0.36) solid 30px;
   color: white;
 }
+
 .float {
   position: fixed;
   width: 60px;
